@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'SFPRO';
+  src: url('@/assets/fonts/SanFranciscoProText/SFProText-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFPRO';
+  src: url('@/assets/fonts/SanFranciscoProText/SFProText-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFPRO';
+  src: url('@/assets/fonts/SanFranciscoProText/SFProText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFPRO';
+  src: url('@/assets/fonts/SanFranciscoProText/SFProText-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFPRO';
+  src: url('@/assets/fonts/SanFranciscoProText/SFProText-Semibold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  * {
+    font-family: "SFPRO", "Roboto", sans-serif!important;
+  }
+}
+
+
+ul {
+  list-style: none;
+}
+
+@media (min-width: 1280px) {
+  .v-container {
+    max-width: 1122px !important;
+  }
+}
+
+.v-btn {
+    letter-spacing: normal!important;
+}
+
+.font-weight-semi-bold {
+  font-weight: 600 !important;
+}
+
+.rounded-12 {
+  border-radius: 12px !important;
+}
+
+.v-btn--size-x-large {
+  --v-btn-height: 48px !important;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Для Chrome, Safari, Edge, и Opera */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.v-select {
+  display: flex;
+  * {
+    color: inherit!important;
+  }
+  .v-field__input {
+      padding: 4px 4px 4px 0;
+  }
+  .v-select__selection-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+  }
+  .mdi-menu-down {
+    opacity: 1!important;
+    color: inherit!important;
+  }
+  .mdi-menu-down::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    background-color: currentColor; /* Используем текущий цвет */
+    mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none"%3E%3Cpath d="M11 1.0835L9.25269 2.77301C7.85925 4.12036 7.16253 4.79404 6.31333 4.89777C6.10527 4.92318 5.89473 4.92318 5.68667 4.89777C4.83748 4.79404 4.14075 4.12036 2.74731 2.77301L1 1.0835" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"%2F%3E%3C%2Fsvg%3E') no-repeat center / contain;
+  }
+  .v-field--variant-solo {
+    box-shadow: none;
+    background: transparent;
+  }
+  .v-field__input {
+    --v-input-control-height: 32px;
+    min-height: 32px;
+  }
+}
+
+.custom-slider {
+  .v-slider-track__background--opacity {
+    opacity: 1;
+  }
+  .v-slider-thumb__surface {
+    border: 2px solid rgb(var(--v-theme-primary));
+  }
+}

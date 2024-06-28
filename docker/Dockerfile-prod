@@ -1,0 +1,23 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN apk add --no-cache build-base python3 make
+RUN npm install
+RUN npm install -g pm2
+
+COPY . .
+
+ENV API_URL=https://turaq-backend.parqour.com/api/v1
+ENV YANDEX_ID=97486307
+ENV GOOGLE_ID=G-6G705FP654
+ENV GOOGLE_GTM=GTM-PTBWJHR8
+
+ENV NUXT_HOST 0.0.0.0
+ENV NUXT_PORT 3000
+
+EXPOSE 3000
+
+CMD ["sh", "-c", "yarn build && pm2-runtime start ecosystem.config.cjs"]
